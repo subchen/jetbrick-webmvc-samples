@@ -25,15 +25,15 @@ import jetbrick.template.utils.DateUtils;
 
 @IocBean
 public class OrderService {
-    private final Map<Integer, Order> orders = new TreeMap<Integer, Order>();
+    private final Map<Integer, OrderInfo> orders = new TreeMap<Integer, OrderInfo>();
     private final Map<Integer, OrderItem> orderItems = new TreeMap<Integer, OrderItem>();
 
     public OrderService() {
-        addOrder(new Order(101, "A-0458-1726", 82.91, DateUtils.asDate("2013-05-16 12:00:09")));
-        addOrder(new Order(102, "A-9478-3456", 48.81, DateUtils.asDate("2013-05-17 13:00:08")));
-        addOrder(new Order(103, "A-0384-0958", 18.83, DateUtils.asDate("2013-05-18 14:00:07")));
-        addOrder(new Order(104, "A-8472-8092", 30.47, DateUtils.asDate("2013-05-17 15:00:06")));
-        addOrder(new Order(105, "A-1267-6932", 19.98, DateUtils.asDate("2013-05-16 16:00:05")));
+        addOrder(new OrderInfo(101, "A-0458-1726", 82.91, DateUtils.asDate("2013-05-16 12:00:09")));
+        addOrder(new OrderInfo(102, "A-9478-3456", 48.81, DateUtils.asDate("2013-05-17 13:00:08")));
+        addOrder(new OrderInfo(103, "A-0384-0958", 18.83, DateUtils.asDate("2013-05-18 14:00:07")));
+        addOrder(new OrderInfo(104, "A-8472-8092", 30.47, DateUtils.asDate("2013-05-17 15:00:06")));
+        addOrder(new OrderInfo(105, "A-1267-6932", 19.98, DateUtils.asDate("2013-05-16 16:00:05")));
 
         addOrderItem(new OrderItem(9101, 101, "Despicable Me 2 ", 19.98));
         addOrderItem(new OrderItem(9102, 101, "The Hunger Games: Catching Fire", 29.95));
@@ -48,15 +48,15 @@ public class OrderService {
         addOrderItem(new OrderItem(9111, 105, "Despicable Me 2 ", 19.98));
     }
 
-    public List<Order> getOrders() {
-        return new ArrayList<Order>(orders.values());
+    public List<OrderInfo> getOrders() {
+        return new ArrayList<OrderInfo>(orders.values());
     }
 
-    public Order getOrder(Integer id) {
+    public OrderInfo getOrder(Integer id) {
         return orders.get(id);
     }
 
-    public void addOrder(Order order) {
+    public void addOrder(OrderInfo order) {
         orders.put(order.getId(), order);
     }
 

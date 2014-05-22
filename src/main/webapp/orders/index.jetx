@@ -18,7 +18,7 @@
         <td>Date</td>
         <td></td>
     </tr>
-    #for (Order order: orders)
+    #for (OrderInfo order: orders)
     <tr>
         <td>${order.id}</td>
         <td><a href="${order.id}">${order.serialno}</a></td>

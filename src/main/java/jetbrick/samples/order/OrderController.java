@@ -28,7 +28,7 @@ import com.alibaba.fastjson.JSONAware;
 @Controller(value = "/orders", singleton = true)
 public class OrderController {
     @Inject
-    private OrderService orderService;
+    private OrderDbService orderService;
 
     @Action("/")
     public String list(Model model) {
@@ -43,7 +43,7 @@ public class OrderController {
     }
 
     @Action(method = HttpMethod.POST)
-    public String add(@RequestForm Order order) {
+    public String add(@RequestForm OrderInfo order) {
         orderService.addOrder(order);
         return "redirect:/orders/";
     }
