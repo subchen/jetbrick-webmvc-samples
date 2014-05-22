@@ -20,6 +20,7 @@ package jetbrick.samples.passport;
 
 import javax.servlet.http.HttpSession;
 import jetbrick.ioc.annotations.Inject;
+import jetbrick.samples.JSON;
 import jetbrick.web.mvc.action.*;
 import jetbrick.web.mvc.action.annotations.RequestForm;
 import com.alibaba.fastjson.JSONAware;

@@ -16,12 +16,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package jetbrick.samples.passport;
+package jetbrick.samples;
 
-import com.alibaba.fastjson.JSONAware;
-import com.alibaba.fastjson.JSONObject;
+import java.util.List;
+import java.util.Map;
+import com.alibaba.fastjson.*;
 
 public class JSON {
+
+    @SuppressWarnings("unchecked")
+    public static JSONArray toJSON(List<?> list) {
+        return new JSONArray((List<Object>) list);
+    }
+
+    @SuppressWarnings("unchecked")
+    public static JSONObject toJSON(Map<?, ?> map) {
+        return new JSONObject((Map<String, Object>) map);
+    }
 
     public static JSONAware ok() {
         JSONObject json = new JSONObject();
