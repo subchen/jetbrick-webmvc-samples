@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>samples</title>
+
+    <base href="${BASE_PATH}" />
+</head>
+
+<body>
+
+<div>Hello jetx.</div>
+<ul>
+    <li><a href="passport/login">/passport/login</a></li>
+    <li><a href="orders/">/orders/</a></li>
+    <li><a href="upload/">/upload/</a></li>
+</ul>
+
+<br/>
+<br/>
+<ul>
+    <li><a href="json">/json</a></li>
+    <li><a href="model?id=123">/model?id=123</a></li>
+    <li><a href="path/999">/path/999</a></li>
+    <li><hr/></li>
+    <li><a href="request.jsp">/request.jsp</a></li>
+    <li><a href="request.jetx">/request.jetx</a></li>
+    <li><a href="request.vm">/request.vm</a></li>
+    <li><a href="request.json">/request.json</a></li>
+    <li><a href="request.xml">/request.xml</a></li>
+</ul>
+
+</body>
+</html>
