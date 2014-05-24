@@ -19,8 +19,8 @@
 
 <br/>
 <ul>
-    <li><a href="./param/name?id=1&name=哈罗">/param/name?id=1&name=哈罗</a></li>
-    <li><a href="./param/auto?id=1&name=哈罗">/param/auto?id=1&name=哈罗</a></li>
+    <li><a href="./param/name?id=1&name=jack">/param/name?id=1&name=jack</a></li>
+    <li><a href="./param/auto?id=1&name=jack">/param/auto?id=1&name=jack</a></li>
     <li><hr/></li>
     <li><a href="./rawtext/html">/rawtext/html</a></li>
     <li><a href="./rawtext/text">/rawtext/text</a></li>
