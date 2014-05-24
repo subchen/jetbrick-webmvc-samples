@@ -18,6 +18,25 @@
 </ul>
 
 <br/>
+<ul>
+    <li><a href="./param/name?id=1&name=哈罗">/param/name?id=1&name=哈罗</a></li>
+    <li><a href="./param/auto?id=1&name=哈罗">/param/auto?id=1&name=哈罗</a></li>
+    <li><hr/></li>
+    <li><a href="./rawtext/html">/rawtext/html</a></li>
+    <li><a href="./rawtext/text">/rawtext/text</a></li>
+    <li><a href="./rawtext/json">/rawtext/json</a></li>
+    <li><a href="./rawtext/js">/rawtext/js</a></li>
+    <li><a href="./rawtext/css">/rawtext/css</a></li>
+    <li><a href="./rawtext/xml">/rawtext/xml</a></li>
+    <li><hr/></li>
+    <li><a href="./dataview/html">/dataview/html</a></li>
+    <li><a href="./dataview/text">/dataview/text</a></li>
+    <li><a href="./dataview/json">/dataview/json</a></li>
+    <li><a href="./dataview/js">/dataview/js</a></li>
+    <li><a href="./dataview/css">/dataview/css</a></li>
+    <li><a href="./dataview/xml">/dataview/xml</a></li>
+
+</ul>
 <br/>
 <ul>
     <li><a href="json">/json</a></li>
