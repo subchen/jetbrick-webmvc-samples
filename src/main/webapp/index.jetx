@@ -21,6 +21,11 @@
 <ul>
     <li><a href="./param/name?id=1&name=jack">/param/name?id=1&name=jack</a></li>
     <li><a href="./param/auto?id=1&name=jack">/param/auto?id=1&name=jack</a></li>
+    <li><a href="./param/ids?id=1&id=2&id=3">/param/ids?id=1&id=2&id=3</a></li>
+    <li><a href="./param/ids">/param/ids</a></li>
+    <li><a href="./param/names?name=a1&name=a2">/param/names?name=a1&name=a2</a></li>
+    <li><hr/></li>
+    <li><a href="./form/show">/form/show</a></li>
     <li><hr/></li>
     <li><a href="./rawtext/html">/rawtext/html</a></li>
     <li><a href="./rawtext/text">/rawtext/text</a></li>

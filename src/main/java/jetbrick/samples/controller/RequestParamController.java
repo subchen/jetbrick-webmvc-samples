@@ -41,4 +41,16 @@ public class RequestParamController {
         model.add("name", name);
         return JSON.toJSON(model);
     }
+
+    @Action
+    public JSONAware ids(Model model, @RequestParam int[] id) {
+        model.add("id", id);
+        return JSON.toJSON(model);
+    }
+
+    @Action
+    public JSONAware names(Model model, @RequestParam String[] name) {
+        model.add("name", name);
+        return JSON.toJSON(model);
+    }
 }
