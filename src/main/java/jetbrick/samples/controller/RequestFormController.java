@@ -19,7 +19,6 @@
 package jetbrick.samples.controller;
 
 import jetbrick.lang.builder.ToStringBuilder;
-import jetbrick.web.mvc.Model;
 import jetbrick.web.mvc.action.Action;
 import jetbrick.web.mvc.action.Controller;
 import jetbrick.web.mvc.action.annotations.RequestForm;
@@ -29,12 +28,12 @@ import jetbrick.web.mvc.results.RawText;
 public class RequestFormController {
 
     @Action
-    public String show(Model model, @RequestForm UserInfo user) {
+    public String show() {
         return "form.jsp";
     }
 
     @Action
-    public RawText save(Model model, @RequestForm UserInfo user) {
+    public RawText save(@RequestForm UserInfo user) {
         return RawText.text(user.toString());
     }
 
