@@ -25,6 +25,10 @@
     <li><a href="./param/ids">/param/ids</a></li>
     <li><a href="./param/names?name=a1&name=a2">/param/names?name=a1&name=a2</a></li>
     <li><hr/></li>
+    <li><a href="./result/object/show1">./result/object/show1</a></li>
+    <li><a href="./result/object/show2">./result/object/show2</a></li>
+    <li><a href="./result/object/show3">./result/object/show3</a></li>
+    <li><hr/></li>
     <li><a href="./form/show">/form/show</a></li>
     <li><hr/></li>
     <li><a href="./rawtext/html">/rawtext/html</a></li>
