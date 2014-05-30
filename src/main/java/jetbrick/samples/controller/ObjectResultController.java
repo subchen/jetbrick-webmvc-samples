@@ -22,6 +22,7 @@ import jetbrick.samples.JSON;
 import jetbrick.web.mvc.action.Action;
 import jetbrick.web.mvc.action.Controller;
 import jetbrick.web.mvc.results.RawText;
+import com.alibaba.fastjson.JSONObject;
 
 @Controller("/result/object")
 public class ObjectResultController {
@@ -40,4 +41,10 @@ public class ObjectResultController {
     public Object show3() {
         return JSON.ok();
     }
+
+    @Action
+    public JSONObject show4() {
+        return new JSONObject();
+    }
+
 }
