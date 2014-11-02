@@ -46,7 +46,7 @@
     while (param.hasMoreElements()) {
         String name = param.nextElement();
         String value[] = request.getParameterValues(name);
-        os.printf(FORMAT, name, jetbrick.lang.StringUtils.join(value, ", "));
+        os.printf(FORMAT, name, jetbrick.util.StringUtils.join(value, ", "));
     }
     os.println();
 

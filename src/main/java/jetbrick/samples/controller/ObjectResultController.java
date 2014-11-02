@@ -21,7 +21,7 @@ package jetbrick.samples.controller;
 import jetbrick.samples.JSON;
 import jetbrick.web.mvc.action.Action;
 import jetbrick.web.mvc.action.Controller;
-import jetbrick.web.mvc.results.RawText;
+import jetbrick.web.mvc.result.RawText;
 import com.alibaba.fastjson.JSONObject;
 
 @Controller("/result/object")

@@ -20,7 +20,7 @@ package jetbrick.samples.controller;
 
 import jetbrick.web.mvc.action.Action;
 import jetbrick.web.mvc.action.Controller;
-import jetbrick.web.mvc.results.RawText;
+import jetbrick.web.mvc.result.RawText;
 
 @Controller("/rawtext")
 public class RawTextController {

@@ -18,17 +18,22 @@
  */
 package jetbrick.samples.controller;
 
+import jetbrick.bean.asm.AsmFactory;
 import jetbrick.web.mvc.Model;
 import jetbrick.web.mvc.RequestContext;
 import jetbrick.web.mvc.action.Action;
 import jetbrick.web.mvc.action.Controller;
-import jetbrick.web.mvc.action.annotations.PathVariable;
-import jetbrick.web.mvc.action.annotations.RequestParam;
+import jetbrick.web.mvc.action.annotation.PathVariable;
+import jetbrick.web.mvc.action.annotation.RequestParam;
 import com.alibaba.fastjson.JSONAware;
 import com.alibaba.fastjson.JSONObject;
 
 @Controller
 public class IndexController {
+
+    static {
+        AsmFactory.setDebugEnabled(true);
+    }
 
     @Action("/")
     public String index(RequestContext ctx) {

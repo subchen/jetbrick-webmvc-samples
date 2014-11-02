@@ -18,11 +18,11 @@
  */
 package jetbrick.samples.order;
 
-import jetbrick.ioc.annotations.Inject;
+import jetbrick.ioc.annotation.Inject;
 import jetbrick.web.mvc.Model;
 import jetbrick.web.mvc.action.*;
-import jetbrick.web.mvc.action.annotations.PathVariable;
-import jetbrick.web.mvc.action.annotations.RequestForm;
+import jetbrick.web.mvc.action.annotation.PathVariable;
+import jetbrick.web.mvc.action.annotation.RequestForm;
 import com.alibaba.fastjson.JSONAware;
 
 @Controller(value = "/orders", singleton = true)

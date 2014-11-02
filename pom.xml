@@ -1,39 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" 
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	       xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.github.com</groupId>
-	<artifactId>jetbrick-sample-webapps</artifactId>
-	<version>1.0.5</version>
-	<packaging>war</packaging>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.github.com</groupId>
+    <artifactId>jetbrick-sample-webapps</artifactId>
+    <version>2.0</version>
+    <packaging>war</packaging>
 
-	<properties>
-		<project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.6</maven.compiler.source>
-		<maven.compiler.target>1.6</maven.compiler.target>
-		<maven.compiler.debug>true</maven.compiler.debug>
-	</properties>
+    <properties>
+        <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.6</maven.compiler.source>
+        <maven.compiler.target>1.6</maven.compiler.target>
+        <maven.compiler.debug>true</maven.compiler.debug>
+    </properties>
 
-	<dependencies>
-		<dependency>
-			<groupId>com.github.subchen</groupId>
-			<artifactId>jetbrick-all</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.github.subchen</groupId>
-			<artifactId>jetbrick-template</artifactId>
-			<version>1.2.6</version>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
-			<scope>provided</scope>
-		</dependency>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.2.3.v20140905</version>
+                <configuration>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
+                    <webApp>
+                        <contextPath>/webapp</contextPath>
+                    </webApp>
+                </configuration>
+            </plugin>
+        </plugins>
+        
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.github.subchen</groupId>
+            <artifactId>jetbrick-webmvc</artifactId>
+            <version>2.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.subchen</groupId>
+            <artifactId>jetbrick-orm</artifactId>
+            <version>2.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.subchen</groupId>
+            <artifactId>jetbrick-template-servlet</artifactId>
+            <version>2.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.0.1</version>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
@@ -49,24 +70,24 @@
             <artifactId>logback-classic</artifactId>
             <version>1.0.13</version>
         </dependency>
-		<dependency>
-		    <groupId>com.h2database</groupId>
-		    <artifactId>h2</artifactId>
-		    <version>1.4.178</version>
-		    <scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>druid</artifactId>
-			<version>1.0.5</version>
-			<scope>runtime</scope>
-		</dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.178</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.0.5</version>
+            <scope>runtime</scope>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
-	</dependencies>
+    </dependencies>
 
 </project>

@@ -19,10 +19,10 @@
 package jetbrick.samples.passport;
 
 import javax.servlet.http.HttpSession;
-import jetbrick.ioc.annotations.Inject;
+import jetbrick.ioc.annotation.Inject;
 import jetbrick.samples.JSON;
 import jetbrick.web.mvc.action.*;
-import jetbrick.web.mvc.action.annotations.RequestForm;
+import jetbrick.web.mvc.action.annotation.RequestForm;
 import com.alibaba.fastjson.JSONAware;
 
 @Controller(singleton = true)

@@ -3,8 +3,8 @@ package jetbrick.samples.order;
 import javax.sql.DataSource;
 import jetbrick.dao.orm.DbHelper;
 import jetbrick.ioc.IocFactory;
-import jetbrick.ioc.annotations.Inject;
-import jetbrick.ioc.annotations.IocBean;
+import jetbrick.ioc.annotation.Inject;
+import jetbrick.ioc.annotation.IocBean;
 
 @IocBean("jetbrick.dao.orm.DbHelper")
 public class DbHelperFactory implements IocFactory<DbHelper> {

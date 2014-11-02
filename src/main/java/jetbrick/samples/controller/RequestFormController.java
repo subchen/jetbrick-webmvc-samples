@@ -18,11 +18,11 @@
  */
 package jetbrick.samples.controller;
 
-import jetbrick.lang.builder.ToStringBuilder;
+import jetbrick.util.builder.ToStringBuilder;
 import jetbrick.web.mvc.action.Action;
 import jetbrick.web.mvc.action.Controller;
-import jetbrick.web.mvc.action.annotations.RequestForm;
-import jetbrick.web.mvc.results.RawText;
+import jetbrick.web.mvc.action.annotation.RequestForm;
+import jetbrick.web.mvc.result.RawText;
 
 @Controller("/form")
 public class RequestFormController {

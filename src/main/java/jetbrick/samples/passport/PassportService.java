@@ -18,7 +18,7 @@
  */
 package jetbrick.samples.passport;
 
-import jetbrick.ioc.annotations.IocBean;
+import jetbrick.ioc.annotation.IocBean;
 
 @IocBean
 public class PassportService {

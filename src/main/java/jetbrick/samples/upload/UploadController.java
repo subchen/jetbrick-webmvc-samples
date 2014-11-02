@@ -20,7 +20,7 @@ package jetbrick.samples.upload;
 
 import jetbrick.web.mvc.Model;
 import jetbrick.web.mvc.action.*;
-import jetbrick.web.mvc.action.annotations.RequestParam;
+import jetbrick.web.mvc.action.annotation.RequestParam;
 import jetbrick.web.mvc.multipart.FilePart;
 import com.alibaba.fastjson.JSONAware;
 

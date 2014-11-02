@@ -20,8 +20,8 @@ package jetbrick.samples.order;
 
 import java.util.*;
 import java.util.Map.Entry;
-import jetbrick.ioc.annotations.IocBean;
-import jetbrick.template.utils.DateUtils;
+import jetbrick.ioc.annotation.IocBean;
+import jetbrick.util.DateUtils;
 
 @IocBean
 public class OrderService {
@@ -29,11 +29,11 @@ public class OrderService {
     private final Map<Integer, OrderItem> orderItems = new TreeMap<Integer, OrderItem>();
 
     public OrderService() {
-        addOrder(new OrderInfo(101, "A-0458-1726", 82.91, DateUtils.asDate("2013-05-16 12:00:09")));
-        addOrder(new OrderInfo(102, "A-9478-3456", 48.81, DateUtils.asDate("2013-05-17 13:00:08")));
-        addOrder(new OrderInfo(103, "A-0384-0958", 18.83, DateUtils.asDate("2013-05-18 14:00:07")));
-        addOrder(new OrderInfo(104, "A-8472-8092", 30.47, DateUtils.asDate("2013-05-17 15:00:06")));
-        addOrder(new OrderInfo(105, "A-1267-6932", 19.98, DateUtils.asDate("2013-05-16 16:00:05")));
+        addOrder(new OrderInfo(101, "A-0458-1726", 82.91, DateUtils.parse("2013-05-16 12:00:09")));
+        addOrder(new OrderInfo(102, "A-9478-3456", 48.81, DateUtils.parse("2013-05-17 13:00:08")));
+        addOrder(new OrderInfo(103, "A-0384-0958", 18.83, DateUtils.parse("2013-05-18 14:00:07")));
+        addOrder(new OrderInfo(104, "A-8472-8092", 30.47, DateUtils.parse("2013-05-17 15:00:06")));
+        addOrder(new OrderInfo(105, "A-1267-6932", 19.98, DateUtils.parse("2013-05-16 16:00:05")));
 
         addOrderItem(new OrderItem(9101, 101, "Despicable Me 2 ", 19.98));
         addOrderItem(new OrderItem(9102, 101, "The Hunger Games: Catching Fire", 29.95));

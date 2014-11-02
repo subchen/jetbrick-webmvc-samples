@@ -21,8 +21,8 @@
 <hr />
 <div>servletContext paths:</div>
 <ul>
-    <li>servletContext.getRealPath("") = ${servletContext.getRealPath("")}</li>
-    <li>servletContext.getRealPath("/") = ${servletContext.getRealPath("/")}</li>
+    <li>servletContext.getRealPath("") = ${application.getRealPath("")}</li>
+    <li>servletContext.getRealPath("/") = ${application.getRealPath("/")}</li>
 </ul>
 
 <hr />

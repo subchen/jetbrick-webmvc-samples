@@ -21,8 +21,8 @@ package jetbrick.samples.order;
 import java.util.List;
 import jetbrick.dao.orm.*;
 import jetbrick.dao.orm.tx.Transaction;
-import jetbrick.ioc.annotations.Inject;
-import jetbrick.ioc.annotations.IocBean;
+import jetbrick.ioc.annotation.Inject;
+import jetbrick.ioc.annotation.IocBean;
 
 @IocBean
 public class OrderDbService {

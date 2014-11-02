@@ -22,7 +22,7 @@ import jetbrick.samples.JSON;
 import jetbrick.web.mvc.Model;
 import jetbrick.web.mvc.action.Action;
 import jetbrick.web.mvc.action.Controller;
-import jetbrick.web.mvc.action.annotations.RequestParam;
+import jetbrick.web.mvc.action.annotation.RequestParam;
 import com.alibaba.fastjson.JSONAware;
 
 @Controller("/param")
