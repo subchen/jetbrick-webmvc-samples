@@ -18,7 +18,7 @@
  */
 package jetbrick.samples.controller;
 
-import jetbrick.samples.JSON;
+import jetbrick.util.fastjson.JSON;
 import jetbrick.web.mvc.action.Action;
 import jetbrick.web.mvc.action.Controller;
 import jetbrick.web.mvc.result.RawText;

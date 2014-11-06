@@ -1,5 +1,10 @@
 *.class
-*.asc
+*.jar
 *.zip
-/build/
-/target/
+*.asc
+
+target/
+
+.project
+.classpath
+.settings/

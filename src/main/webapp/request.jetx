@@ -36,8 +36,8 @@
 <hr />
 <div>request parameters:</div>
 <ul>
-    #for(Map.Entry param: parameter)
-    <li>${param.key}: ${param.value}</li>
+    #for(Map.Entry p: param)
+    <li>${p.key}: ${p.value}</li>
     #else
         <a href="request.jetx?id=123&name=我是张三">没有参数？点击这里增加参数</a>
     #end
@@ -46,16 +46,16 @@
 <hr />
 <div>session attributes:</div>
 <ul>
-    #for(Map.Entry param: sessionScope)
-    <li>${param.key}: ${param.value}</li>
+    #for(Map.Entry p: sessionScope)
+    <li>${p.key}: ${p.value}</li>
     #end
 </ul>
 
 <hr />
 <div>application attributes:</div>
 <ul>
-    #for(Map.Entry param: applicationScope)
-    <li>${param.key}: ${param.value}</li>
+    #for(Map.Entry p: applicationScope)
+    <li>${p.key}: ${p.value}</li>
     #end
 </ul>
 

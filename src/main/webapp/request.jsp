@@ -1,17 +1,18 @@
-<%@page contentType="text/html" pageEncoding="utf-8" trimDirectiveWhitespaces="true" %>
-<%@page import="java.util.*" %>
-<%@page import="java.io.*" %>
+<%@page contentType="text/html" pageEncoding="utf-8" trimDirectiveWhitespaces="true"%>
+<%@page import="java.util.*"%>
+<%@page import="java.io.*"%>
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>samples</title>
-</head>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>samples</title>
+	</head>
 
 <body>
 
-<pre><xml>
+	<pre>
+		<xml>
 <%
     String FORMAT = "%20s: %s%n";
     PrintWriter os = new PrintWriter(out);
@@ -51,14 +52,18 @@
     os.println();
 
     os.println("Request Cookies: ====================================");
-    for (Cookie cookie : request.getCookies()) {
-        os.printf(FORMAT, cookie.getName(), cookie.getValue());
+    Cookie[] cookies = request.getCookies();
+    if (cookies != null) {
+        for (Cookie cookie : cookies) {
+            os.printf(FORMAT, cookie.getName(), cookie.getValue());
+        }
     }
     os.println();
 
     os.flush();
 %>
-</xml></pre>
+</xml>
+	</pre>
 
 </body>
 </html>
