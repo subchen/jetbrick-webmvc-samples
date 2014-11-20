@@ -62,4 +62,10 @@ public class IndexController {
         model.put("id", id);
         return new JSONObject(model);
     }
+
+    @Action("/freemarker")
+    public String freemarker(Model model) {
+        //model.put("user", "aa");
+        return "1.ftl";
+    }
 }

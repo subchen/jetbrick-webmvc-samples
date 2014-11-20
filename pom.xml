@@ -3,17 +3,19 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
+    <parent>
+        <groupId>com.github.subchen</groupId>
+        <artifactId>jetbrick-parent</artifactId>
+        <version>2.4</version>
+    </parent>
+
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.github.subchen</groupId>
     <artifactId>jetbrick-sample-webapps</artifactId>
-    <version>2.0</version>
+    <version>2.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <properties>
-        <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.6</maven.compiler.source>
-        <maven.compiler.target>1.6</maven.compiler.target>
-        <maven.compiler.debug>true</maven.compiler.debug>
+        <webmvc.version>2.0.1-SNAPSHOT</webmvc.version>
     </properties>
 
     <build>
@@ -23,9 +25,11 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>9.2.3.v20140905</version>
                 <configuration>
+                    <webDefaultXml>src/main/resources/webdefault.xml</webDefaultXml>
                     <scanIntervalSeconds>10</scanIntervalSeconds>
                     <webApp>
                         <contextPath>/</contextPath>
+                        <defaultsDescriptor>src/main/resources/webdefault.xml</defaultsDescriptor>
                     </webApp>
                 </configuration>
             </plugin>
@@ -36,7 +40,7 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>jetbrick-webmvc</artifactId>
-            <version>2.0</version>
+            <version>${webmvc.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
@@ -46,28 +50,33 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>jetbrick-template-jetbrickmvc</artifactId>
-            <version>2.0</version>
+            <version>2.0.2</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>jetbrick-webmvc-fileupload</artifactId>
-            <version>2.0</version>
+            <version>${webmvc.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>jetbrick-webmvc-fastjson</artifactId>
-            <version>2.0</version>
+            <version>${webmvc.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>jetbrick-webmvc-freemarker</artifactId>
+            <version>${webmvc.version}</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
-            <version>3.0.1</version>
+            <version>${servlet.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.7</version>
+            <version>${slf4j.version}</version>
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
@@ -84,7 +93,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.11</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
