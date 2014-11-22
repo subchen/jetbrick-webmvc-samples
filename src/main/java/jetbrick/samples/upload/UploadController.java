@@ -33,9 +33,10 @@ public class UploadController {
     }
 
     @Action(value = "/upload/single", method = HttpMethod.POST)
-    public JSONAware doPost(@RequestParam("name") String name, FilePart file, Model model) {
+    public JSONAware doPost(@RequestParam("name") String name, FilePart file1, @RequestParam("file") FilePart file2, Model model) {
         model.add("name", name);
-        model.add("file", file);
+        model.add("file1", file1);
+        model.add("file2", file2);
         return null;
     }
 
