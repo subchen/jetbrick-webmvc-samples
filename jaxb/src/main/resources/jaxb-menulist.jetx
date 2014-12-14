@@ -1,0 +1,31 @@
+<h3>jaxb testcase</h3>
+<ul>
+  <li><a href="/jaxb/data.xml">data.xml</a></li>
+  <li><a href="#" onclick="postjaxbparam()">post jaxb xml param</a></li>
+  <li><a href="#" onclick="postjaxbbody()">post jaxb xml body</a></li>
+</ul>
+
+<script type="text/javascript">
+var xml = "<users><user><id>1</id><name>jetbrick</name></user></users>";
+function postjaxbparam() {
+    $.ajax("/jaxb/post-param", {
+        data: {xml: xml},
+        dataType: 'xml',
+        type: 'POST', 
+        success: function(data) {
+            alert("post-param" + data);
+        }
+    });
+}
+function postjaxbbody() {
+    $.ajax("/jaxb/post-body", {
+        contentType: 'application/xml',
+        data: xml,
+        dataType: 'xml',
+        type: 'POST', 
+        success: function(data) {
+            alert("post-body: " + data);
+        }
+    });
+}
+</script>

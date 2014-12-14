@@ -1,0 +1,27 @@
+<h3>fastjson testcase</h3>
+<ul>
+  <li><a href="/fastjson/data.json">data.json</a></li>
+  <li><a href="/fastjson/post-param?json={'a':true, 'b':[1,2]}">post json param: {'a':true, 'b':[1,2]}</a></li>
+  <li><a href="#" onclick="postjson()">post json body</a></li>
+  <li><a href="#" onclick="getjsonp()">jsonp</a></li>
+</ul>
+
+<script type="text/javascript">
+function postjson() {
+    data = {a:123, b: [1,2,3]};
+    $.ajax("/fastjson/post-body", {
+        contentType: 'application/json',
+        data: JSON.stringify(data),
+        type: 'POST', 
+        success: function(data) {
+            alert("post-body: " + JSON.stringify(data));
+        }
+    });
+}
+
+function getjsonp() {
+    $.getJSON("/fastjson/data.json?callback=?", function(data) {
+        alert("jsonp: " + JSON.stringify(data));
+    }, 'jsonp');
+}
+</script>

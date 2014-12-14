@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>jetbrick webmvc samples</title>
+    
+    <script src="${CONTEXT_APTH}/assets/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+
+<h3>jsp testcase</h3>
+<ul>
+  <li><a href="request.jsp">request.jsp</a></li>
+</ul>
+
+#include("requestform-menulist.jetx")
+#include("fastjson-menulist.jetx")
+#include("xml-menulist.jetx")
+#include("jaxb-menulist.jetx")
+#include("fileupload-menulist.jetx")
+#include("freemarker-menulist.jetx")
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+<h3>@RequestForm testcase</h3>
+<ul>
+  <li><a href="/requestform/show">form</a></li>
+</ul>

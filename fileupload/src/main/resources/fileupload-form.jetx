@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>文件上传</title>    
+</head>
+
+<body>
+
+<p>
+单文件上传：
+<form action="${CONTEXT_PATH}/fileupload/single-file" method="post" enctype="multipart/form-data">
+  <input type="file" name="file" /><br/>
+  <input type="submit" /><br/>
+</form>
+</p>
+
+<p>
+多文件上传：
+<form action="${CONTEXT_PATH}/fileupload/multi-files" method="post" enctype="multipart/form-data">
+  <input type="text" name="name" value="test" /><br/>
+  <input type="file" name="file1" /><br/>
+  <input type="file" name="file2" /><br/>
+  <input type="file" name="file3" /><br/>
+  <input type="submit" /><br/>
+</form>
+</p>
+
+</body>
+</html>

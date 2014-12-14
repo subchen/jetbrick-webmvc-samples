@@ -1,0 +1,31 @@
+<h3>xml testcase</h3>
+<ul>
+  <li><a href="/xml/data.xml">data.xml</a></li>
+  <li><a href="#" onclick="postxmlparam()">post xml param</a></li>
+  <li><a href="#" onclick="postxmlbody()">post xml body</a></li>
+</ul>
+
+<script type="text/javascript">
+var xml = "<users><user><id>1</id><name>jetbrick</name></user></users>";
+function postxmlparam() {
+    $.ajax("/xml/post-param", {
+        data: {xml: xml},
+        dataType: 'xml',
+        type: 'POST', 
+        success: function(data) {
+            alert("post-param" + data);
+        }
+    });
+}
+function postxmlbody() {
+    $.ajax("/xml/post-body", {
+        contentType: 'application/xml',
+        data: xml,
+        dataType: 'xml',
+        type: 'POST', 
+        success: function(data) {
+            alert("post-body: " + data);
+        }
+    });
+}
+</script>

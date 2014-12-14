@@ -1,0 +1,4 @@
+<h3>freemarker testcase</h3>
+<ul>
+  <li><a href="/freemarker/hello?user=freemaker">hello freemarker</a></li>
+</ul>

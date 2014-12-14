@@ -10,92 +10,22 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>jetbrick-sample-webapps</artifactId>
+    <artifactId>jetbrick-webmvc-samples-parent</artifactId>
     <version>2.0-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
 
     <properties>
-        <webmvc.version>2.0.1-SNAPSHOT</webmvc.version>
+        <webmvc.version>2.1</webmvc.version>
     </properties>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.eclipse.jetty</groupId>
-                <artifactId>jetty-maven-plugin</artifactId>
-                <version>9.2.3.v20140905</version>
-                <configuration>
-                    <webDefaultXml>src/main/resources/webdefault.xml</webDefaultXml>
-                    <scanIntervalSeconds>10</scanIntervalSeconds>
-                    <webApp>
-                        <contextPath>/</contextPath>
-                        <defaultsDescriptor>src/main/resources/webdefault.xml</defaultsDescriptor>
-                    </webApp>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
-    <dependencies>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>jetbrick-webmvc</artifactId>
-            <version>${webmvc.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>jetbrick-orm</artifactId>
-            <version>2.0</version>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>jetbrick-template-jetbrickmvc</artifactId>
-            <version>2.0.2</version>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>jetbrick-webmvc-fileupload</artifactId>
-            <version>${webmvc.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>jetbrick-webmvc-fastjson</artifactId>
-            <version>${webmvc.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>jetbrick-webmvc-freemarker</artifactId>
-            <version>${webmvc.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>${servlet.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <version>1.4.178</version>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>1.0.9</version>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+    <modules>
+        <module>webapp</module>
+        <module>requestform</module>
+        <module>fastjson</module>
+        <module>fileupload</module>
+        <module>freemarker</module>
+        <module>xml</module>
+        <module>jaxb</module>
+    </modules>
 
 </project>
